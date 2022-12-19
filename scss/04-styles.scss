@@ -1,0 +1,70 @@
+// @mixin | @include
+
+// mixin without parameter
+@mixin link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  font-size: 18px;
+}
+
+.header ul {
+  @include link-list();
+
+  li {
+    padding: 1rem;
+    background-color: rgb(0, 110, 110);
+    border-radius: 0.5rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+.footer ul {
+  @include link-list();
+
+  li {
+    padding: 0.5rem;
+    background-color: rgb(112, 86, 0);
+    border-radius: 0.5rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+// mixin with parameters
+@mixin flex-box($gap: 0.5rem, $direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  flex-direction: $direction;
+}
+
+.main .container {
+  @include flex-box(1rem, column);
+  width: 20rem;
+  height: 20rem;
+  background: gray;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  .box {
+    background-color: bisque;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+}

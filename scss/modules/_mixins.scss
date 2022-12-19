@@ -1,0 +1,16 @@
+@mixin link-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 18px;
+}
+
+@mixin flex-box($gap: 0.5rem, $direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+  flex-direction: $direction;
+}

@@ -1,0 +1,37 @@
+// !global | map-get()
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+// variable biasa
+$color-bg: rgb(172, 172, 172);
+$color-text: rgb(40, 40, 40);
+
+// variable map
+$my-color: (
+  "dark-bg": rgb(0, 19, 46),
+  "dark-text": rgb(255, 255, 255),
+);
+
+main {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  gap: 1rem;
+
+  .card-1 {
+    background-color: $color-bg;
+    color: $color-text;
+  }
+
+  .card-2 {
+    background-color: map-get($my-color, "dark-bg");
+    color: map-get($my-color, "dark-text");
+  }
+
+  .card-1,
+  .card-2 {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 12rem;
+  }
+}

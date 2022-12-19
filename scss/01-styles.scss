@@ -1,0 +1,19 @@
+$color-black: rgb(0, 33, 61);
+$color-white: rgb(224, 224, 224);
+
+header {
+  width: 30rem;
+  height: 15rem;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+body {
+  background-color: black;
+}
